@@ -46,7 +46,7 @@ prompt.get([{
 
     const textDomainOptions = {
         files: './**/*.*',
-        from: /\'_s\'/g,
+        from: /\'empty-parcel\'/g,
         to: textDomain,
         ignore: [
             './README.md',
@@ -58,7 +58,7 @@ prompt.get([{
     };
     const functionsNameOptions = {
         files: './**/*.*',
-        from: /_s_/g,
+        from: /empty_parcel_/g,
         to: functionsName,
         ignore: [
             './README.md',
@@ -70,12 +70,12 @@ prompt.get([{
     };
     const textDomainStylesOptions = {
         files: './style.css',
-        from: /Text Domain: _s/g,
+        from: /Text Domain: empty-parcel/g,
         to: textDomainStyles,
     };
     const docBlocksOptions = {
         files: './**/*.*',
-        from: / _s/g,
+        from: / empty-parcel/g,
         to: docBlocks,
         ignore: [
             './README.md',
@@ -87,7 +87,7 @@ prompt.get([{
     };
     const prefixedHandlesOptions = {
         files: './**/*.*',
-        from: /_s-/g,
+        from: /empty-parcel-/g,
         to: prefixedHandles,
         ignore: [
             './README.md',
@@ -99,7 +99,7 @@ prompt.get([{
     };
     const constantsOptions = {
         files: './**/*.*',
-        from: /_S_/g,
+        from: /EMPTY_PARCEL_/g,
         to: constants,
         ignore: [
             './README.md',

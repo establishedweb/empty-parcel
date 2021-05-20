@@ -10,8 +10,8 @@ My ultra-minimal CSS might make me look like theme tartare but that means less s
 * A custom header implementation in `inc/custom-header.php`. Just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
 * Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
 * Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample layouts in `sass/layouts/` made using CSS Grid for a sidebar on either side of your content. Just uncomment the layout of your choice in `sass/style.scss`.
+* A script at `src/js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
+* 2 sample layouts in `src/sass/layouts/` made using CSS Grid for a sidebar on either side of your content. Just uncomment the layout of your choice in `src/sass/style.scss`.
 Note: `.no-sidebar` styles are automatically loaded.
 * Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
 * Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
@@ -49,7 +49,8 @@ $ npm run setup
 
 `empty-parcel` comes packed with CLI commands tailored for WordPress theme development :
 
-- `npm run watch` : runs the parcel watch command
+- `npm run watch` : runs the parcel watch command and outputs CSS and JS to `dist/` directory.
+- `npm run build` : runs the parcel build command and outputs CSS and JS to `dist/` directory.
 
 - `composer lint:wpcs` : checks all PHP files against [PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
 - `composer lint:php` : checks all PHP files for syntax errors.

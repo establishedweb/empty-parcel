@@ -18,8 +18,10 @@
   },
   "devDependencies": {
     "@wordpress/scripts": "^12.1.0",
+    "browser-sync": "^2.27.5",
+    "concurrently": "^6.3.0",
     "dir-archiver": "^1.1.1",
-    "parcel-bundler": "^1.12.5",
+    "parcel": "^2.0.0",
     "parcel-plugin-watch-reload": "^1.0.3",
     "prompt": "^1.1.0",
     "replace-in-file": "^6.2.0",
@@ -43,8 +45,10 @@
     "files": "**/*.php"
   },
   "scripts": {
-    "watch": "parcel watch src/js/scripts.js --out-dir dist/ --public-url ./",
-    "build": "parcel build src/js/scripts.js --out-dir dist/",
+    "watch": "parcel watch src/js/scripts.js --out-dir ./dist --public-url ./",
+    "build:parcel": "parcel build src/js/scripts.js --no-cache --out-dir ./dist --public-url ./",
+    "clean": "rm -rf .parcel-cache dist/*",
+    "build": "npm run clean && npm run build:parcel",
     "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
